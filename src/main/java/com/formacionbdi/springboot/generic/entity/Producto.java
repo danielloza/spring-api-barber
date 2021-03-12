@@ -24,10 +24,10 @@ public class Producto implements Serializable {
 	
 	private String nombre;
 	private Double precio;
+	private String paquete;
 	
-	@Column(name = "create_at") //aplica cuando el nombre de la base es diferente al del modelo
-	@Temporal(TemporalType.DATE) //especifica en que formato se guarda la fecha
-	private Date createAt;
+	@Column(name ="precio_pack")
+	private Double precioPack;
 
 	public Long getId() {
 		return id;
@@ -53,14 +53,25 @@ public class Producto implements Serializable {
 		this.precio = precio;
 	}
 
-	public Date getCreateAt() {
-		return createAt;
+	
+	public String getPaquete() {
+		return paquete;
 	}
 
-	public void setCreateAt(Date createAt) {
-		this.createAt = createAt;
+	public void setPaquete(String paquete) {
+		this.paquete = paquete;
 	}
-	
+
+
+	public Double getPrecioPack() {
+		return precioPack;
+	}
+
+	public void setPrecioPack(Double precioPack) {
+		this.precioPack = precioPack;
+	}
+
+
 	/**
 	 * 
 	 */

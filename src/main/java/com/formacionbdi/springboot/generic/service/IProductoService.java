@@ -9,4 +9,6 @@ public interface IProductoService {
 
 	public List<Producto> findAll();
 	public Producto findById(Long id);
+	public void deleteFindById(Long id);
+	public Producto add(Producto producto);
 }

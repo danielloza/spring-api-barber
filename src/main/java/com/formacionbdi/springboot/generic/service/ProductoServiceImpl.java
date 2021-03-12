@@ -28,5 +28,16 @@ public class ProductoServiceImpl implements IProductoService{
 		return productoDao.findById(id).orElse(null); // orElse: por si no hay dato le asigna el null
 	}
 
+	@Override
+	@Transactional(readOnly = true)
+	public void deleteFindById(Long id) {
+		productoDao.deleteById(id);
+	}
+
+	@Override
+	public Producto add(Producto producto) {
+		return productoDao.save(producto);
+	}
+
 
 }
