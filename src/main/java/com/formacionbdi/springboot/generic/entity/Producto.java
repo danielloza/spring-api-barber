@@ -26,9 +26,10 @@ public class Producto implements Serializable {
 	private Double precio;
 	private String paquete;
 	
-	@Column(name ="precio_pack")
+	@Column(name="precio_pack")
 	private Double precioPack;
-
+	
+	
 	public Long getId() {
 		return id;
 	}
@@ -53,7 +54,6 @@ public class Producto implements Serializable {
 		this.precio = precio;
 	}
 
-	
 	public String getPaquete() {
 		return paquete;
 	}
@@ -62,7 +62,6 @@ public class Producto implements Serializable {
 		this.paquete = paquete;
 	}
 
-
 	public Double getPrecioPack() {
 		return precioPack;
 	}
@@ -70,7 +69,6 @@ public class Producto implements Serializable {
 	public void setPrecioPack(Double precioPack) {
 		this.precioPack = precioPack;
 	}
-
 
 	/**
 	 * 

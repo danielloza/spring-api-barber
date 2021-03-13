@@ -52,8 +52,6 @@ public class ProductoController {
 		productoActual = productoService.findById(id);
 		productoActual.setNombre(producto.getNombre());
 		productoActual.setPrecio(producto.getPrecio());
-		productoActual.setPaquete(producto.getPaquete());
-		productoActual.setPrecioPack(producto.getPrecioPack());
 		return productoUpdate=productoService.add(productoActual);
 	}
 }
