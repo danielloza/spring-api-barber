@@ -29,12 +29,13 @@ public class ProductoServiceImpl implements IProductoService{
 	}
 
 	@Override
-	@Transactional(readOnly = true)
+	@Transactional
 	public void deleteFindById(Long id) {
 		productoDao.deleteById(id);
 	}
 
 	@Override
+	@Transactional
 	public Producto add(Producto producto) {
 		return productoDao.save(producto);
 	}
