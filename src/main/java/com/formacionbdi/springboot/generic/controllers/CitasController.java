@@ -18,7 +18,8 @@ import com.formacionbdi.springboot.generic.entity.Citas;
 import com.formacionbdi.springboot.generic.service.IBarberoService;
 import com.formacionbdi.springboot.generic.service.ICitasService;
 
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://barber-shop-ten.vercel.app") 
 @RestController
 @RequestMapping("/api/appointments")
 public class CitasController {
@@ -50,6 +51,7 @@ public class CitasController {
 	public Citas update(@RequestBody Citas citas, @PathVariable Long id) {
 		Citas citasUpdate = null;
 		Citas citasActual = null;
+		var estatus = 0;
 		
 		citasActual = citasService.findById(id);
 		/*citasActual.setNombreCliente(citas.getNombreCliente());
@@ -61,7 +63,7 @@ public class CitasController {
 		citasActual.setCp(citas.getCp());
 		citasActual.setDescDomicilio(citas.getDescDomicilio());
 		citasActual.setNotas(citas.getNotas());*/
-		citasActual.setEstatus(citas.getEstatus());
+		citasActual.setEstatus(estatus);
 		return citasUpdate=citasService.add(citasActual);
 	}
 	
