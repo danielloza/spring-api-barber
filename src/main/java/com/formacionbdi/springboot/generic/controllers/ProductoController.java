@@ -17,7 +17,7 @@ import com.formacionbdi.springboot.generic.entity.Producto;
 import com.formacionbdi.springboot.generic.service.IProductoService;
 
 //@CrossOrigin(origins = "http://localhost:4200")
-@CrossOrigin(origins = "https://barber-shop-ten.vercel.app") 
+@CrossOrigin(origins = {"https://barber-shop-ten.vercel.app", "*"}) 
 @RestController
 @RequestMapping("/api/productos")
 public class ProductoController {
