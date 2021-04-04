@@ -19,7 +19,7 @@ import com.formacionbdi.springboot.generic.service.IBarberoService;
 import com.formacionbdi.springboot.generic.service.ICitasService;
 
 //@CrossOrigin(origins = "http://localhost:4200")
-@CrossOrigin(origins = "https://barber-shop-ten.vercel.app") 
+@CrossOrigin(origins = {"https://barber-shop-ten.vercel.app", "*"}) 
 @RestController
 @RequestMapping("/api/appointments")
 public class CitasController {
