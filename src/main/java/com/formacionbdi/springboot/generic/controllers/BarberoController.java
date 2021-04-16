@@ -3,6 +3,7 @@ package com.formacionbdi.springboot.generic.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,11 +31,13 @@ public class BarberoController {
 		return barberoService.findAll();
 	}
 	
+	@Secured({"ROLE_ADMIN", "ROLE_USER"})
 	@GetMapping("/ver/{id}")
 	public Barbero detalle(@PathVariable Long id){
 		return barberoService.findById(id);
 	}
 	
+	@Secured("ROLE_ADMIN")
 	@DeleteMapping("/delete/{id}")
 	public void eliminar(@PathVariable Long id){
 		barberoService.deleteFindById(id);
@@ -45,6 +48,7 @@ public class BarberoController {
 		return barberoService.add(barbero);
 	}
 	
+	@Secured("ROLE_ADMIN")
 	@PutMapping("/update/{id}")
 	public Barbero update(@RequestBody Barbero barbero, @PathVariable Long id) {
 		Barbero barberoUpdate = null;
