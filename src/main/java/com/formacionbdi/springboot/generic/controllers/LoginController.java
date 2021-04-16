@@ -19,7 +19,7 @@ public class LoginController {
 	private IUsuarioService iuService;
 	
 	@GetMapping("/ver/{user}/{pass}")
-	public Integer detalle(@PathVariable String user,@PathVariable  String pass){
+	public Usuario detalle(@PathVariable String user,@PathVariable  String pass){
 		return iuService.findUserPassword(user,pass);
 	}
 

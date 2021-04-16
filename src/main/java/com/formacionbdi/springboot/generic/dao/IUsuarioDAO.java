@@ -16,11 +16,11 @@ public interface IUsuarioDAO extends CrudRepository<Usuario, Long>{
 	@Query("Select u From Usuario u WHERE u.username = ?1")
 	public Usuario findByUsername2(String username);
 	
-	@Query("Select COUNT(u) From Usuario u WHERE u.username = ?1 and u.password = ?2 and u.enabled = true")
+	/*@Query("Select COUNT(u) From Usuario u WHERE u.username = ?1 and u.password = ?2 and u.enabled = true")
 	public Integer findUserPassword(String user, String pass);
+	*/
 	
-	/*
 	@Query("Select u From Usuario u WHERE u.username = ?1 and u.password = ?2 and u.enabled = true")
-	public Usuario findUserPassword(String user, String pass);*/
+	public Usuario findUserPassword(String user, String pass);
 	
 }
