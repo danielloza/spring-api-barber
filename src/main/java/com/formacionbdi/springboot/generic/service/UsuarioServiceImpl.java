@@ -53,7 +53,7 @@ public class UsuarioServiceImpl implements UserDetailsService, IUsuarioService{
 	}
 
 	@Override
-	public Usuario findUserPassword(String user, String pass) {
+	public Integer findUserPassword(String user, String pass) {
 		
 		return usuarioDAO.findUserPassword(user,pass);
 	}
