@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.formacionbdi.springboot.generic.entity.Usuario;
 import com.formacionbdi.springboot.generic.service.IUsuarioService;
 
-@CrossOrigin(origins = {"https://barber-shop-ten.vercel.app", "*"}) 
+@CrossOrigin(origins = {"https://barber-shop-ten.vercel.app","http://localhost:4200", "*"}) 
 @RestController
 @RequestMapping("/api/login")
 public class LoginController {
